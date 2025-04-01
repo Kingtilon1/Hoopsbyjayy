@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -9,13 +8,11 @@ import { Trophy, Award, BookOpen, Users } from 'lucide-react';
 import CallToAction from '@/components/CallToAction';
 
 const About = () => {
-  // Set page title and meta description for SEO
   useEffect(() => {
-    document.title = 'About NYC Elite Basketball Coach | Professional Training Experience';
-    // Add meta description
+    document.title = 'About Coach Josh | Professional Basketball Training in NYC';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Meet NYC\'s elite basketball coach with years of experience developing players of all ages and skill levels. Learn about our coaching philosophy and training approach.');
+      metaDescription.setAttribute('content', 'Meet Coach Josh, a professional basketball coach in NYC with years of experience developing players of all ages and skill levels. Learn about our coaching philosophy and training approach.');
     }
   }, []);
 
@@ -25,7 +22,7 @@ const About = () => {
       <Navbar />
       <div className="pt-20 pb-10 bg-gradient-to-br from-primary/90 to-primary text-white">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Coach Tilon</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Coach Josh</h1>
           <p className="text-xl text-white/80 max-w-3xl">
             Dedicated to basketball excellence and player development for over 15 years.
           </p>
@@ -44,10 +41,10 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-6">Elite Basketball Training and Development</h2>
               <div className="space-y-6 text-lg">
                 <p>
-                  Coach Tilon Bobb brings extensive experience and passion to basketball training in NYC. With a background in competitive basketball and professional coaching, he has developed a comprehensive training methodology that delivers results for players at all levels.
+                  Coach Josh brings extensive experience and passion to basketball training in NYC. With a background in competitive basketball and professional coaching, he has developed a comprehensive training methodology that delivers results for players at all levels.
                 </p>
                 <p>
-                  Having worked with hundreds of players from youth beginners to college athletes, Coach Tilon understands how to tailor training approaches to meet individual needs while pushing athletes to reach their full potential.
+                  Having worked with hundreds of players from youth beginners to college athletes, Coach Josh understands how to tailor training approaches to meet individual needs while pushing athletes to reach their full potential.
                 </p>
                 <p>
                   His coaching philosophy focuses on developing complete players who excel technically, physically, and mentally. This holistic approach ensures that athletes not only improve their basketball skills but also develop character traits that serve them beyond the court.
@@ -57,7 +54,7 @@ const About = () => {
             <div className="flex justify-center">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-secondary to-accent relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-bold text-3xl text-white">COACH<br />TILON</span>
+                  <span className="font-bold text-3xl text-white">COACH<br />JOSH</span>
                 </div>
               </div>
             </div>
