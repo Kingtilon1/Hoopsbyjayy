@@ -4,6 +4,7 @@ import { ArrowDown, Star } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 
 const Hero = () => {
   return (
@@ -40,16 +41,22 @@ const Hero = () => {
             
             <div className="flex items-center pt-6">
               <div className="flex -space-x-2">
-                {[...Array(4)].map((_, i) => (
-                  <div key={i} className={cn(
-                    "h-10 w-10 rounded-full border-2 border-white overflow-hidden",
-                    "bg-gradient-to-br from-gray-500 to-gray-700"
-                  )}>
-                    <div className="h-full w-full flex items-center justify-center text-xs font-bold">
-                      {i === 3 ? "+50" : ""}
-                    </div>
-                  </div>
-                ))}
+                <Avatar className="border-2 border-white">
+                  <AvatarImage src="/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png" alt="Client 1" />
+                  <AvatarFallback>C1</AvatarFallback>
+                </Avatar>
+                <Avatar className="border-2 border-white">
+                  <AvatarImage src="/lovable-uploads/3f18c2e1-022e-4c58-a3bf-ba06142850c5.png" alt="Client 2" />
+                  <AvatarFallback>C2</AvatarFallback>
+                </Avatar>
+                <Avatar className="border-2 border-white">
+                  <AvatarImage src="/lovable-uploads/f90bc4df-24d8-46bc-bced-efe5982e518b.png" alt="Client 3" />
+                  <AvatarFallback>C3</AvatarFallback>
+                </Avatar>
+                <Avatar className="border-2 border-white">
+                  <AvatarImage src="/lovable-uploads/7cb157ec-8453-4bd4-8187-a66ee801563b.png" alt="Client 4" />
+                  <AvatarFallback>50+</AvatarFallback>
+                </Avatar>
               </div>
               <div className="ml-4">
                 <div className="font-bold">Trusted by 50+ Clients</div>
@@ -61,11 +68,12 @@ const Hero = () => {
           <div className="hidden md:flex justify-center relative">
             <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-white/10 relative overflow-hidden backdrop-blur-sm">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-4/5 h-4/5">
-                  {/* Placeholder for coach image */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
-                    <span className="font-bold text-3xl">COACH</span>
-                  </div>
+                <div className="relative w-full h-full">
+                  <img 
+                    src="/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png"
+                    alt="Coach Josh"
+                    className="object-cover w-full h-full"
+                  />
                 </div>
               </div>
             </div>
