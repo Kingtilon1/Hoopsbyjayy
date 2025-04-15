@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
@@ -44,41 +45,42 @@ const Programs = () => {
 
         <ImageCarousel />
         
-      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {programs.map((program, index) => (
-          <div 
-            key={index} 
-            className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
-          >
-            <div className="h-48 relative">
-              <img 
-                src={program.image} 
-                alt={program.title}
-                className="w-full h-full object-cover"
-              />
-              <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-50`}></div>
-              <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white relative z-10">
-                {program.title}
-              </h3>
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {programs.map((program, index) => (
+            <div 
+              key={index} 
+              className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+            >
+              <div className="h-48 relative">
+                <img 
+                  src={program.image} 
+                  alt={program.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-50`}></div>
+                <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white relative z-10">
+                  {program.title}
+                </h3>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 mb-6">{program.description}</p>
+                <Button asChild variant="outline">
+                  <Link to="/programs" className="inline-flex items-center">
+                    Learn More <ChevronRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
-            <div className="p-6">
-              <p className="text-gray-600 mb-6">{program.description}</p>
-              <Button asChild variant="outline">
-                <Link to="/programs" className="inline-flex items-center">
-                  Learn More <ChevronRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        ))}
-      </div>
-        
-      <div className="mt-12 text-center">
-        <Button asChild size="lg">
-          <Link to="/contact" className="inline-flex items-center">
-            Book a Free Consultation <ChevronRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
+          ))}
+        </div>
+          
+        <div className="mt-12 text-center">
+          <Button asChild size="lg">
+            <Link to="/contact" className="inline-flex items-center">
+              Book a Free Consultation <ChevronRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
