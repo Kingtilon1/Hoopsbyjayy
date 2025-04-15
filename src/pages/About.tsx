@@ -51,12 +51,27 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-secondary to-accent relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-bold text-3xl text-white">COACH<br />JOSH</span>
-                </div>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="/lovable-uploads/d984d400-922c-4be5-a1a8-4b2986ac0e69.png"
+                alt="Coach Josh in training session"
+                className="rounded-lg shadow-lg w-full h-48 object-cover"
+              />
+              <img
+                src="/lovable-uploads/c063bdd7-88bb-4f28-a628-83674847625f.png"
+                alt="Coach Josh profile"
+                className="rounded-lg shadow-lg w-full h-48 object-cover"
+              />
+              <img
+                src="/lovable-uploads/3aac0755-9a5b-459c-a513-96164f0db7ff.png"
+                alt="Coach Josh with NBA trainer"
+                className="rounded-lg shadow-lg w-full h-48 object-cover"
+              />
+              <img
+                src="/lovable-uploads/9c712df8-4c3b-4cd9-bfcb-6b5c7a3e0f73.png"
+                alt="Coach Josh with youth players"
+                className="rounded-lg shadow-lg w-full h-48 object-cover"
+              />
             </div>
           </div>
           

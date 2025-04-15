@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Star } from 'lucide-react';
 import { Button } from './ui/button';
@@ -70,8 +69,8 @@ const Hero = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full">
                   <img 
-                    src="/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png"
-                    alt="Coach Josh"
+                    src="/lovable-uploads/9c712df8-4c3b-4cd9-bfcb-6b5c7a3e0f73.png"
+                    alt="Coach Josh training youth players"
                     className="object-cover w-full h-full"
                   />
                 </div>
