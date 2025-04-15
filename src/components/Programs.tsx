@@ -9,7 +9,7 @@ const programs = [
   {
     title: "Youth Development",
     description: "Building fundamental skills and love for the game in young players ages 5-12.",
-    image: "/lovable-uploads/9c712df8-4c3b-4cd9-bfcb-6b5c7a3e0f73.png",
+    image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png",
     color: "from-blue-500 to-blue-700"
   },
   {
@@ -21,13 +21,13 @@ const programs = [
   {
     title: "Adult Skills & Conditioning",
     description: "Stay sharp and improve your game with specialized training for adult players of all levels.",
-    image: "/lovable-uploads/c063bdd7-88bb-4f28-a628-83674847625f.png",
+    image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png",
     color: "from-primary to-purple-700"
   },
   {
     title: "Team Training",
     description: "Comprehensive training programs for entire teams looking to build chemistry and elevate performance.",
-    image: "/lovable-uploads/3aac0755-9a5b-459c-a513-96164f0db7ff.png",
+    image: "/lovable-uploads/29315e7e-2faa-475b-99f7-f82e945f26fc.png",
     color: "from-green-500 to-green-700"
   }
 ];

@@ -55,22 +55,22 @@ const About = () => {
               <img
                 src="/lovable-uploads/d984d400-922c-4be5-a1a8-4b2986ac0e69.png"
                 alt="Coach Josh in training session"
-                className="rounded-lg shadow-lg w-full h-48 object-cover"
+                className="rounded-lg shadow-lg w-full h-48 object-contain"
               />
               <img
                 src="/lovable-uploads/c063bdd7-88bb-4f28-a628-83674847625f.png"
                 alt="Coach Josh profile"
-                className="rounded-lg shadow-lg w-full h-48 object-cover"
+                className="rounded-lg shadow-lg w-full h-48 object-contain"
               />
               <img
                 src="/lovable-uploads/3aac0755-9a5b-459c-a513-96164f0db7ff.png"
-                alt="Coach Josh with NBA trainer"
-                className="rounded-lg shadow-lg w-full h-48 object-cover"
+                alt="Coach Josh with team"
+                className="rounded-lg shadow-lg w-full h-48 object-contain"
               />
               <img
                 src="/lovable-uploads/9c712df8-4c3b-4cd9-bfcb-6b5c7a3e0f73.png"
                 alt="Coach Josh with youth players"
-                className="rounded-lg shadow-lg w-full h-48 object-cover"
+                className="rounded-lg shadow-lg w-full h-48 object-contain"
               />
             </div>
           </div>
