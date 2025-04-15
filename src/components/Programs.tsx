@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
+import ImageCarousel from './ImageCarousel';
 
 const programs = [
   {
@@ -41,8 +41,10 @@ const Programs = () => {
             Elite basketball training programs designed to meet your specific goals and take your game to the next level.
           </p>
         </div>
+
+        <ImageCarousel />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
           {programs.map((program, index) => (
             <div 
               key={index} 
