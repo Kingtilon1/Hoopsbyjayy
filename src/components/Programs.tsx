@@ -9,25 +9,25 @@ const programs = [
   {
     title: "Youth Development",
     description: "Building fundamental skills and love for the game in young players ages 5-12.",
-    image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png",
+    image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png", // Keep existing Youth Development image
     color: "from-blue-500 to-blue-700"
   },
   {
     title: "Teen Elite Training",
     description: "Advanced skill development for serious players ages 13-18 looking to compete at higher levels.",
-    image: "/lovable-uploads/d984d400-922c-4be5-a1a8-4b2986ac0e69.png",
+    image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png", // Use the image that was in Youth Development
     color: "from-secondary to-orange-600"
   },
   {
     title: "Adult Skills & Conditioning",
     description: "Stay sharp and improve your game with specialized training for adult players of all levels.",
-    image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png",
+    image: "/lovable-uploads/1571ce64-2189-439a-b1a8-da1ea3c28d35.png", // Use the new uploaded image
     color: "from-primary to-purple-700"
   },
   {
     title: "Team Training",
     description: "Comprehensive training programs for entire teams looking to build chemistry and elevate performance.",
-    image: "/lovable-uploads/29315e7e-2faa-475b-99f7-f82e945f26fc.png",
+    image: "/lovable-uploads/29315e7e-2faa-475b-99f7-f82e945f26fc.png", // Keep existing Team Training image
     color: "from-green-500 to-green-700"
   }
 ];
