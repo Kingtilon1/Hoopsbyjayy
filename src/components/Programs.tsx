@@ -55,7 +55,7 @@ const Programs = () => {
                 <img 
                   src={program.image} 
                   alt={program.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-gray-50"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-50`}></div>
                 <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white relative z-10">

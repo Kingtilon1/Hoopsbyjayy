@@ -1,7 +1,11 @@
+
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, MapPin, Send } from 'lucide-react';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
+import { Label } from './ui/label';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -79,6 +83,93 @@ const ContactForm = () => {
               <p className="text-gray-600">
                 We provide training at various facilities across NYC, including school gyms, public courts, and private training centers.
               </p>
+            </div>
+          </div>
+          
+          <div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <Label htmlFor="name">Your Name</Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="John Doe"
+                    required
+                    className="mt-1"
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="you@example.com"
+                    required
+                    className="mt-1"
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="phone">Phone Number (Optional)</Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="(212) 555-1234"
+                    className="mt-1"
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="program">Interested Program</Label>
+                  <select
+                    id="program"
+                    name="program"
+                    value={formData.program}
+                    onChange={handleChange}
+                    className="mt-1 w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    required
+                  >
+                    <option value="Youth Development">Youth Development</option>
+                    <option value="Teen Elite Training">Teen Elite Training</option>
+                    <option value="Adult Skills & Conditioning">Adult Skills & Conditioning</option>
+                    <option value="Team Training">Team Training</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <Label htmlFor="message">Your Message</Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your basketball goals or any questions you have..."
+                    required
+                    className="mt-1 min-h-[120px]"
+                  />
+                </div>
+                
+                <Button type="submit" disabled={loading} className="w-full">
+                  {loading ? (
+                    <>Processing...</>
+                  ) : (
+                    <>
+                      Send Message <Send className="ml-2 h-4 w-4" />
+                    </>
+                  )}
+                </Button>
+              </form>
             </div>
           </div>
         </div>
