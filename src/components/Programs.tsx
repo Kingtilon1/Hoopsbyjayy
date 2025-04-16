@@ -9,25 +9,25 @@ const programs = [
   {
     title: "Youth Development",
     description: "Building fundamental skills and love for the game in young players ages 5-12.",
-    image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png",
+    image: "/lovable-uploads/29315e7e-2faa-475b-99f7-f82e945f26fc.png", // Using the old team training image for youth development
     color: "from-blue-500 to-blue-700"
   },
   {
     title: "Teen Elite Training",
     description: "Advanced skill development for serious players ages 13-18 looking to compete at higher levels.",
-    image: "/lovable-uploads/d984d400-922c-4be5-a1a8-4b2986ac0e69.png",
+    image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png", // Using the previous youth development image
     color: "from-secondary to-orange-600"
   },
   {
     title: "Adult Skills & Conditioning",
     description: "Stay sharp and improve your game with specialized training for adult players of all levels.",
-    image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png",
+    image: "/lovable-uploads/d376f0f0-4409-49d8-88bf-82502d54af78.png", // Using the new image
     color: "from-primary to-purple-700"
   },
   {
     title: "Team Training",
     description: "Comprehensive training programs for entire teams looking to build chemistry and elevate performance.",
-    image: "/lovable-uploads/29315e7e-2faa-475b-99f7-f82e945f26fc.png",
+    image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png", // Using the old adult skills image
     color: "from-green-500 to-green-700"
   }
 ];
@@ -45,18 +45,20 @@ const Programs = () => {
 
         <ImageCarousel />
         
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-4">
           {programs.map((program, index) => (
             <div 
               key={index} 
               className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
             >
-              <div className="h-48 relative">
-                <img 
-                  src={program.image} 
-                  alt={program.title}
-                  className="w-full h-full object-contain bg-gray-50"
-                />
+              <div className="h-56 relative">
+                <div className="w-full h-full overflow-hidden">
+                  <img 
+                    src={program.image} 
+                    alt={program.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-50`}></div>
                 <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white relative z-10">
                   {program.title}
