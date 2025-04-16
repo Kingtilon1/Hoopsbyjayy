@@ -55,7 +55,7 @@ const ImageCarousel = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="rounded-lg object-cover w-full h-full object-top"
+                    className="rounded-lg object-cover w-full h-full"
                   />
                 </AspectRatio>
                 {image.caption && (
