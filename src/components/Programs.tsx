@@ -45,26 +45,26 @@ const Programs = () => {
 
         <ImageCarousel />
         
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
           {programs.map((program, index) => (
             <div 
               key={index} 
-              className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+              className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all h-full flex flex-col"
             >
-              <div className="h-48 relative">
+              <div className="relative h-64">
                 <img 
                   src={program.image} 
                   alt={program.title}
-                  className="w-full h-full object-contain bg-gray-50"
+                  className="w-full h-full object-cover"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-50`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-60`}></div>
                 <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white relative z-10">
                   {program.title}
                 </h3>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-grow flex flex-col justify-between">
                 <p className="text-gray-600 mb-6">{program.description}</p>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="mt-auto w-fit">
                   <Link to="/programs" className="inline-flex items-center">
                     Learn More <ChevronRight className="ml-2 h-4 w-4" />
                   </Link>
