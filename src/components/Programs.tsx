@@ -10,25 +10,29 @@ const programs = [
     title: "Youth Development",
     description: "Building fundamental skills and love for the game in young players ages 5-12.",
     image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png", // Using the Youth Development image from the carousel
-    color: "from-blue-500 to-blue-700"
+    color: "from-blue-500 to-blue-700",
+    objectFit: "object-cover scale-[0.85]" // Added scale to zoom out slightly
   },
   {
     title: "Teen Elite Training",
     description: "Advanced skill development for serious players ages 13-18 looking to compete at higher levels.",
     image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png", // Use the image that was in Youth Development
-    color: "from-secondary to-orange-600"
+    color: "from-secondary to-orange-600",
+    objectFit: "object-cover scale-[0.85]" // Added scale to zoom out slightly
   },
   {
     title: "Adult Skills & Conditioning",
     description: "Stay sharp and improve your game with specialized training for adult players of all levels.",
     image: "/lovable-uploads/1571ce64-2189-439a-b1a8-da1ea3c28d35.png", // Use the new uploaded image
-    color: "from-primary to-purple-700"
+    color: "from-primary to-purple-700",
+    objectFit: "object-cover" // Keep as is
   },
   {
     title: "Team Training",
     description: "Comprehensive training programs for entire teams looking to build chemistry and elevate performance.",
     image: "/lovable-uploads/29315e7e-2faa-475b-99f7-f82e945f26fc.png", // Keep existing Team Training image
-    color: "from-green-500 to-green-700"
+    color: "from-green-500 to-green-700",
+    objectFit: "object-cover" // Keep as is
   }
 ];
 
@@ -51,12 +55,14 @@ const Programs = () => {
               key={index} 
               className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all h-full flex flex-col"
             >
-              <div className="relative h-64">
-                <img 
-                  src={program.image} 
-                  alt={program.title}
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative h-64 overflow-hidden">
+                <div className="h-full w-full flex items-center justify-center">
+                  <img 
+                    src={program.image} 
+                    alt={program.title}
+                    className={`w-full h-full ${program.objectFit || 'object-cover'} transition-transform`}
+                  />
+                </div>
                 <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-60`}></div>
                 <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white relative z-10">
                   {program.title}
