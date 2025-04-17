@@ -20,18 +20,11 @@ const Footer = () => {
               Transforming basketball players of all ages and skill levels across New York City with elite-level coaching and personalized training programs.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/hoopsbyjayy/" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
-                <Twitter />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
-                <Facebook />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
-                <Youtube />
-              </a>
+             
+              
             </div>
           </div>
           
