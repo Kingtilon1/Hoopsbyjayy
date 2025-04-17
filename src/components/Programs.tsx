@@ -11,14 +11,14 @@ const programs = [
     description: "Building fundamental skills and love for the game in young players ages 5-12.",
     image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png", // Using the Youth Development image from the carousel
     color: "from-blue-500 to-blue-700",
-    objectFit: "object-contain" // Changed to object-contain to show the full image
+    objectPosition: "center 40%" // Add positioning to show full content while filling container
   },
   {
     title: "Teen Elite Training",
     description: "Advanced skill development for serious players ages 13-18 looking to compete at higher levels.",
     image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png", // Use the image that was in Youth Development
     color: "from-secondary to-orange-600",
-    objectFit: "object-contain" // Changed to object-contain to show the full image
+    objectPosition: "center 35%" // Add positioning to show full content while filling container
   },
   {
     title: "Adult Skills & Conditioning",
@@ -60,7 +60,8 @@ const Programs = () => {
                   <img 
                     src={program.image} 
                     alt={program.title}
-                    className={`w-full h-full ${program.objectFit} transition-transform`}
+                    className={`w-full h-full object-cover transition-transform ${program.objectPosition ? '' : program.objectFit || ''}`}
+                    style={program.objectPosition ? { objectPosition: program.objectPosition } : {}}
                   />
                 </div>
                 <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-60`}></div>
