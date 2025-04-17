@@ -11,14 +11,14 @@ const programs = [
     description: "Building fundamental skills and love for the game in young players ages 5-12.",
     image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png", // Using the Youth Development image from the carousel
     color: "from-blue-500 to-blue-700",
-    objectFit: "object-cover scale-[0.85]" // Added scale to zoom out slightly
+    objectFit: "object-contain" // Changed to object-contain to show the full image
   },
   {
     title: "Teen Elite Training",
     description: "Advanced skill development for serious players ages 13-18 looking to compete at higher levels.",
     image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png", // Use the image that was in Youth Development
     color: "from-secondary to-orange-600",
-    objectFit: "object-cover scale-[0.85]" // Added scale to zoom out slightly
+    objectFit: "object-contain" // Changed to object-contain to show the full image
   },
   {
     title: "Adult Skills & Conditioning",
@@ -56,11 +56,11 @@ const Programs = () => {
               className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all h-full flex flex-col"
             >
               <div className="relative h-64 overflow-hidden">
-                <div className="h-full w-full flex items-center justify-center">
+                <div className="h-full w-full flex items-center justify-center bg-gray-100">
                   <img 
                     src={program.image} 
                     alt={program.title}
-                    className={`w-full h-full ${program.objectFit || 'object-cover'} transition-transform`}
+                    className={`w-full h-full ${program.objectFit} transition-transform`}
                   />
                 </div>
                 <div className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-60`}></div>
