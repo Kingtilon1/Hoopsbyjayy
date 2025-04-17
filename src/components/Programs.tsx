@@ -9,7 +9,7 @@ const programs = [
   {
     title: "Youth Development",
     description: "Building fundamental skills and love for the game in young players ages 5-12.",
-    image: "/lovable-uploads/782233ca-031b-4b21-a241-b50f1a4afb1b.png", // Keep existing Youth Development image
+    image: "/lovable-uploads/61c643ac-ef35-4570-8c72-40d9269c3dca.png", // Using the Youth Development image from the carousel
     color: "from-blue-500 to-blue-700"
   },
   {
