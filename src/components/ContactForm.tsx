@@ -6,6 +6,8 @@ import { Mail, MapPin, Send } from 'lucide-react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
+import emailjs from 'emailjs-com';
+
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -23,17 +25,29 @@ const ContactForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setLoading(false);
+  
+    const templateParams = {
+      from_name: formData.name,     // maps to {{from_name}}
+      to_name: 'Coach Josh',        // maps to {{to_name}} (you can hardcode this)
+      message: formData.message     // maps to {{message}}
+    };
+  
+    try {
+      await emailjs.send(
+        'service_egueh5i',     // replace with your actual service ID
+        'template_fkyihuu',    // replace with your actual template ID
+        templateParams,
+        'R_D2lKy8QymP_Jrx6'      // replace with your actual public key
+      );
+  
       toast({
-        title: "Message received!",
-        description: "Thanks for reaching out. We'll get back to you within 24 hours.",
+        title: 'Message sent!',
+        description: "Thanks for reaching out. We'll get back to you soon.",
       });
+  
       setFormData({
         name: '',
         email: '',
@@ -41,7 +55,14 @@ const ContactForm = () => {
         message: '',
         program: 'Youth Development'
       });
-    }, 1500);
+    } catch (error) {
+      toast({
+        title: 'Sending failed',
+        description: 'Something went wrong. Please try again later.',
+      });
+    }
+  
+    setLoading(false);
   };
 
   return (
